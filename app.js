@@ -68,19 +68,6 @@ app.use(errorController.get404);
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    User.findOne().then(user => {
-        if (!user) {
-            const user = new User({
-                name: 'Max',
-                email: 'max@test.com',
-                cart: {
-                    items: []
-                }
-            });
-            user.save();
-        }
-
-    });
     console.log(`listening on port ${port}`);
 });
 
