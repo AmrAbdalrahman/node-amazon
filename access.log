@@ -1,0 +1,5 @@
+::1 - - [04/Mar/2019:21:27:55 +0000] "GET / HTTP/1.1" 200 - "http://localhost:3000/admin/products" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+::1 - - [04/Mar/2019:21:27:55 +0000] "GET /css/product.css HTTP/1.1" 200 379 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+::1 - - [04/Mar/2019:21:27:55 +0000] "GET /js/main.js HTTP/1.1" 200 519 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+::1 - - [04/Mar/2019:21:27:55 +0000] "GET /css/main.css HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
+::1 - - [04/Mar/2019:21:27:55 +0000] "GET /images/2019-02-23T11-45-59.894Z-52599098_1131373227045418_5829592499936559104_n.jpg HTTP/1.1" 200 28458 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36"
