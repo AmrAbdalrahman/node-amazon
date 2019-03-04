@@ -1,0 +1,6 @@
+{
+  "env": {
+    "mongoURI": "mongodb://almagic:Qhz45K{[t5T4j9vG@ds119273.mlab.com:19273/max-shop",
+    "STRIPE_KEY": "sk_test_FWnD2bTie8yBbYudmENYopXr"
+  }
+}

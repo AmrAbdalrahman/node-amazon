@@ -8,6 +8,7 @@ const MondoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
 const multer = require('multer');
+const helmet = require('helmet');
 
 
 const errorController = require('./controllers/error');
@@ -17,11 +18,14 @@ const isAuth = require('./middleware/is-auth');
 
 const User = require('./models/user');
 
-const MONGODB_URI = 'mongodb://localhost:27017/shop';
+//Load Keys
+const keys = require('./config/keys');
+
+/*const MONGODB_URI = 'mongodb://localhost:27017/shop';*/
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGODB_URI, {useNewUrlParser: true}).then((db) => {
+mongoose.connect(keys.mongoURI, {useNewUrlParser: true}).then((db) => {
     console.log('MONGO connectes');
 
 }).catch(error => console.log(error));
@@ -30,7 +34,7 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true}).then((db) => {
 const app = express();
 
 const store = new MondoDBStore({
-    uri: MONGODB_URI,
+    uri: keys.mongoURI,
     collection: 'sessions'
 });
 
@@ -66,6 +70,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
+app.use(helmet());
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'));
